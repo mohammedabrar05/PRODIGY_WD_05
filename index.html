@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name..." id="search-input">
+            <button onclick="getWeather()">Search</button>
+            <button onclick="getCurrentLocation()">
+                <i class="fas fa-location-dot"></i>
+            </button>
+        </div>
+        
+        <div class="loading" id="loading">
+            Loading weather data...
+        </div>
+
+        <div class="weather-info" id="weather-info">
+            <div class="location" id="location">--</div>
+            <div class="temperature" id="temperature">--°C</div>
+            <div class="weather-condition" id="condition">--</div>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <i class="fas fa-temperature-high"></i>
+                    <div>Feels Like</div>
+                    <div id="feels-like">--°C</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-droplet"></i>
+                    <div>Humidity</div>
+                    <div id="humidity">--%</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-wind"></i>
+                    <div>Wind Speed</div>
+                    <div id="wind-speed">-- km/h</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
